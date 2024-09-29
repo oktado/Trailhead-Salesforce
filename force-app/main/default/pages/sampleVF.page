@@ -1,0 +1,14 @@
+<apex:page controller="VFController">
+  <apex:form>
+    <apex:pageBlock >
+    <p>Username</p>
+    <apex:inputText value="{!username}"/><br/>
+    <p>Password</p>
+    <apex:inputSecret value="{!password}"/><br/>
+    <apex:pageBlockButtons location="bottom">
+        <apex:commandButton value="Submit" action="{!submitValidation}"/>
+    </apex:pageBlockButtons>
+    <p>{!statusLogin}</p>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

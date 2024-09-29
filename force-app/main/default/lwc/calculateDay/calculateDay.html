@@ -1,0 +1,46 @@
+<template>
+  <lightning-card title="Calculating Day" icon-name="custom:custom5">
+    <p>
+      <lightning-formatted-date-time
+        value={DateValue}
+      ></lightning-formatted-date-time>
+    </p>
+    <div>
+      <lightning-input
+        type="date"
+        name="selectDate"
+        label="Select Date"
+        class="date value"
+        style="width: 50%"
+        value={dateValue}
+        onchange={handleSelectedDate}
+        required
+        message-when-value-missing=" "
+      >
+      </lightning-input>
+    </div>
+    <div>
+      <lightning-input
+        type="text"
+        name="add days"
+        label="Add Days"
+        class="add value"
+        style="width: 50%"
+        required
+        message-when-value-missing=" "
+        onchange={handleAddDay}
+      >
+      </lightning-input>
+    </div>
+    <div class="slds-m-top_small">
+      <div>
+        <button
+          class="blueButton1 slds-button slds-button_neutral"
+          onclick={handleCalculatingDay}
+        >
+          <p>Submit</p>
+        </button>
+      </div>
+    </div>
+  </lightning-card>
+</template>
